@@ -1,0 +1,40 @@
+#alt-hisse{
+    @extend .container-full;
+    padding: $padding-x 0;
+    margin: $margin-3x auto;
+    .heading{
+        @include text-color;
+        margin-bottom: $margin-3x*3;
+        font-size: 1.6em;
+        font-family: $ikonFont;
+        h1{
+            @include display-inline;
+            font-size: 1.1em;
+            margin:0 $small/2;
+        }
+        span{
+            font-size: 1.1em;
+            color: lighten($colortext, 8%);
+        }
+    }
+    .alt-ikonlar{
+        width: $width-foto;
+        height: $height-foto;
+        margin-bottom: $margin-3x;
+        img{
+            @include photo-value;
+        }
+    }
+    .ikon-basliqi{
+        @include text-color;
+        font-family: $ikonFont;
+        h1{
+            font-size: 1.2em;
+        }
+        p{
+            font-size: 18px;
+            line-height: $medium;
+            color: lighten($colortext, 10%);
+        }
+    }
+}

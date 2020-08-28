@@ -1,0 +1,114 @@
+#top-navbar{
+   @extend .container-full;
+   @include position-relative;
+   padding: $padding-x;
+   background-image: url(../../image/mainfoto1.jpg);
+   background-size: cover;
+   object-fit: cover;
+   height: 400px;
+   .navbar-logo{
+       width: $width-x;
+       height: $height-x;
+   }
+   .navbar-logo{
+      img{
+         width: $width-x;
+         height: $height-x;
+      }
+   }
+   .navbar-menu{
+      ul{
+         li{
+            a{
+               @include position-relative;
+               @include text-color;
+               font-family: $ikonFont;
+               margin: 0 $margin-2x;
+               text-decoration: none;
+               padding: $padding-3x 0;
+               &:focus{
+                  outline: none;
+               }
+            }
+         }
+      }
+   }
+   .navbar-menu{
+      ul{
+         li{
+            ul{
+               li{
+                  @include display-none;
+                  @include position-absolute;
+                  top: 20%;
+                  transition: all 0.2s;
+                  a{
+                     @include white;
+                     padding: $small+5 $medium*2;
+                     background: $colortext;
+                     font-size: $small+5;
+                  }
+               }
+            }
+         }
+      }
+      ul{
+         li{
+            &:hover ul{
+               li{
+                  @include display-block;
+               }
+            }
+         }
+      }
+   }
+   .navbar-button{
+      button{
+         @include border-none;
+         @include white;
+         font-family: $ikonFont;
+         font-size: $small+5;
+         background: $colorNavButton;
+         padding: $padding-x $padding-3x;
+         transition: all 0.5s;
+         &:hover{
+            @include black;
+            background: $colorWhite;
+            border: $mainBorder;
+         }
+      }
+   }
+   .page-heading{
+      @include position-absolute;
+      top: 20%;
+      left: 23%;
+      margin: $margin-3x 0;
+      h1{
+         font-size: $large;
+      }
+      h3{
+         font-size: $medium;
+         margin-bottom: $margin-3x;
+      }
+      h1,h3{
+         @include color-icons;
+         font-family: $pageheading;
+      }
+      p{
+         @include color-icons;
+         font-size: $small+4;
+         margin-bottom: $margin-x;
+      }
+   }
+   .page-button{
+      @include white;
+      @include display-inline;
+      @include position-absolute;
+      top: 70%;
+      left: 23%;
+      padding: $padding-x $padding-3x;
+      border-radius: $border-x;
+      background: $colorNavButton;
+      font-family: $ikonFont;
+   }
+}

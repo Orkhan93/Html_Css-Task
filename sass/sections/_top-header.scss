@@ -1,0 +1,40 @@
+#top-header{
+    @extend .container-full;
+    @include text-color;
+    padding: $padding-x;
+    border-bottom: $mainBorder;
+   .mail{
+       span{
+           i{
+            margin-right: $margin-x;
+            &:hover{
+                @include cursor;
+            }
+           }
+       }
+   }
+   .phone{
+       span{
+           @include color-icons;
+           i{
+            margin-right: $margin-x;
+            &:hover{
+                @include cursor;
+            }
+           }
+       }
+   }
+   .icons{
+       span{
+           @include color-icons;
+           i{
+               @include color-icons;
+               margin-right: $margin-2x;
+            &:hover{
+                @include cursor;
+            }
+           }
+       }
+   }
+}
+

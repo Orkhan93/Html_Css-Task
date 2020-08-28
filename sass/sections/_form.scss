@@ -1,0 +1,71 @@
+#form{
+    @extend .container;
+    @include position-relative;
+    bottom: 5%;
+    box-sizing: border-box;
+    border-radius: $small;
+    background: $colorBox;
+    .row{
+        padding: 0 $padding-2x;
+    }
+    .box-1{
+        border-right: $mainBorder-2;
+        h1{
+            @include white;
+            margin: $margin-3x*1.5 0;
+            font-size: 1.1em;
+            font-family: $pageheading;
+        }
+        input{
+            @include border-none;
+            padding: $padding-x $padding-3x*2;
+            margin: $margin-2x $margin-x/2;
+            border-radius: $small/2;
+            font-family: $pageheading;
+        }
+        input[type=date]{
+            padding: $padding-x $padding-3x*3;
+        }
+        textarea{
+            margin-bottom: $margin-3x;
+            padding: $padding-x;
+            font-family: $pageheading;
+            border-radius: $border-x;
+        }
+    .box-button{
+            @include display-inline;
+            padding: $padding-x $padding-2x;
+            margin: $medium 0;
+            font-family: $pageheading;
+            background: $colorNavButton;
+            border-radius: $border-x;
+            transition: all .7s;
+            &:hover{
+                @include cursor;
+                @include white;
+                background: $colorBox;
+                border: $mainBorder-2;
+            }
+        }
+    }
+    .box-2{
+        @include white;
+        font-family: $pageheading;
+        line-height: $medium;
+        h1{
+            @include white;
+            margin-bottom: $margin-3x ;
+            font-size: 1.1em;
+            font-family: $pageheading;
+        }
+        p{
+            font-size: $small+2;
+        }
+        span{
+            font-size: $medium;
+        }
+        .box2-2nd-heading, .box2-3th-heading, .box2-4th-heading{
+            margin-bottom: $margin-2x;
+        }
+    }
+}

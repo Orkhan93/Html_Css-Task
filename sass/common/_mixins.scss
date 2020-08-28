@@ -1,0 +1,49 @@
+//   Display
+@mixin display-inline{
+    display: inline-block;
+}
+@mixin display-block{
+    display: block;
+}
+@mixin display-none{
+    display: none;
+}
+// Position
+@mixin position-absolute{
+    position: absolute;
+}
+@mixin position-relative{
+    position: relative;
+}
+@mixin border-none{
+    border: none;
+}
+// Cursor
+@mixin cursor{
+    cursor: pointer;
+}
+// Photo-value
+@mixin photo-value{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+// Colors
+@mixin white{
+    color: $colorWhite;
+}
+@mixin black{
+    color: $colorBlack;
+}
+@mixin text-color{
+    color: $colortext;
+}
+@mixin color-icons{
+    color: $colorIcons;
+}
+@mixin bg-button-color{
+    color: $colorNavButton;
+}
+@mixin button-hv-color{
+    color: $colorBox;
+}
